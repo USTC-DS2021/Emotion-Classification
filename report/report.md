@@ -36,7 +36,7 @@
 
 （蓝线为交叉熵，红线为`Focal Loss`）
 
-<img src="img/fastText.png" style="zoom: 67%;" />
+<img src="img/fasttext.png" style="zoom: 67%;" />
 
 可以看到其实在1k个Iter之后验证集上的`kappa score`就基本没有大幅变化了，但是交叉熵的损失函数在1k个Iter后一直在增长，应当认为出现了过拟合。最终测试结果也可以看到，交叉熵对应的模型效果并不如使用`FocalLoss`的模型：
 
@@ -59,7 +59,7 @@
 
 记录训练过程的模型在验证集下的`Focal Loss`和`Kappa Score`：
 
-<img src="img/BERT.png" style="zoom:72%;" />
+<img src="img/bert.png" style="zoom:72%;" />
 
 如图`Loss`在`Epoch=5`之后逐渐增加，而在`Epoch=6, 9`的时候`Kappa`值最高，由于Loss值一直在增加后面的高`kappa score`可能存在着过拟合的隐患。于是我分别检查了两个Epoch下的结果在测试集的数据，得到Epoch=6和9时的结果：
 
